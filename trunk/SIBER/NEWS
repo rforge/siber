@@ -6,7 +6,17 @@
         **************************************************
 
 
-                CHANGES IN SIBER VERSION 0.9.2
+                CHANGES IN R VERSION 0.9.3
+
+
+BUG FIXES
+
+    o   Corrected file extensions of manpages for case-sensitive filesystem.
+
+    o   Corrected format of NEWS so R can read it.
+
+
+                CHANGES IN R VERSION 0.9.2
 
 
 BUG FIXES
@@ -15,7 +25,7 @@ BUG FIXES
         Now updates NB and GP models that also fit 0-inflated models.
 
 
-                CHANGES IN SIBER VERSION 0.9.1
+                CHANGES IN R VERSION 0.9.1
 
 
 NEW FEATURES
