@@ -31,7 +31,7 @@ data(simDat)
 }
 
 \author{
-Pan Tong (nickytong@gmail.com), Kevin R Coombes (kcoombes@mdanderson.org)
+Pan Tong (nickytong@gmail.com), Kevin R Coombes (krc@silicovore.com)
 }
 \seealso{
 \link{SIBER}
