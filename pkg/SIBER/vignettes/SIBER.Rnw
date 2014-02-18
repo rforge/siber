@@ -1,5 +1,5 @@
 %\VignetteIndexEntry{SIBER Vignette}
-%\VignetteDepends{mclust,edgeR,doSNOW}
+%\VignetteDepends{mclust,edgeR,doParallel}
 %\VignetteKeywords{SIBER}
 %\VignettePackage{SIBER}
 
@@ -30,6 +30,14 @@
 \maketitle
 
 \tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% alien part for debuging bibtex (from GRTS package)
+
+%\chapter{Short introduction to Generalized Random Tessellation Stratified sampling (GRTS)}
+%Yet to be written\ldots \citep{Stevens_Olsen_2004, Stevens_Olsen_2003, Stevens_Olsen_1999, Theobald_etal_2007}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% alien part for debuging bibtex
+
 
 <<echo=FALSE>>=
 options(width=80)
@@ -154,31 +162,34 @@ for parallelization. Here we choose the \texttt{foreach} package for
 the backend. The workers are requested and registered by the
 \texttt{doSNOW} package.
 
-Note that, although the parallel code works fine on Windows after the
-program is installed, it causes an error when checking the package on
-Windows.  As a result, we disable this section of the code if running
-on Windows.
-<<notWin>>=
-notwin <- .Platform$OS != "windows"
-@ 
+%Note that, although the parallel code works fine on Windows after the
+%program is installed, it causes an error when checking the package on
+%Windows.  As a result, we disable this section of the code if running
+%on Windows.
+%<<notWin>>=
+%notwin <- .Platform$OS != "windows"
+%@ 
 
 
-<<>>=
-if (notwin) {
-    library(doSNOW)
+%
+% parallel is commented out so that we can pass R-Forge check due to snow package is not installed on the server
+%
+\begin{verbatim}
+    library(doParallel)
     cl <- makeCluster(3, type = "SOCK")
-    registerDoSNOW(cl)
-}
-@ 
+    registerDoParallel(cl)
+\end{verbatim}
+
 
 Note that the above command also works on Linux servers. However, it
 requests master nodes when run within R. For good practice, we can use
-qsub such that the computation is done in the background.
+qsub such that the computation is done in the compute nodes.
 
-Now we perform SIBER for all simulated genes with parallel capabillity.
+Below we illustrate how to use SIBER with parallel computation.
 
-<<parallelAnalysis>>=
-if (notwin) {
+%<<parallelAnalysis>>=
+%if (notwin) {
+\begin{verbatim}
     func <- function(i) {
 	SIBER(y=Dat[i, ], model='LN')
     }
@@ -187,9 +198,10 @@ if (notwin) {
                          .packages='SIBER') %dopar% {
 	func(i)
     }
-    BIinfo_LN[1:3, ]
-}
-@
+\end{verbatim}
+%    BIinfo_LN[1:3, ]
+%}
+%@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,11 +262,14 @@ manual.
 \section{Session Info}
 After all the computations, we close the connection to the workers.
 
-<<>>=
-if (notwin) {
+%<<>>=
+%if(notwin) {
+\begin{verbatim}
     stopCluster(cl)
-}
-@
+\end{verbatim}
+%    }
+%@
+
 
 <<sessionInfo>>=
 getwd()
@@ -262,30 +277,7 @@ sessionInfo()
 @ 
 
 
-\begin{thebibliography}{1}
-\bibitem{Anders2010}
-S.~Anders and W.~Huber.
-\newblock Differential expression analysis for sequence count data.
-\newblock {\em Genome Biol}, 11(10):R106, 2010.
-
-\bibitem{Mortazavi2008}
-A.~Mortazavi, B.A. Williams, K.~McCue, L.~Schaeffer, and B.~Wold.
-\newblock Mapping and quantifying mammalian transcriptomes by rna-seq.
-\newblock {\em Nature methods}, 5(7):621--628, 2008.
-
-\bibitem{Robinson2010}
-M.D. Robinson, D.J. McCarthy, and G.K. Smyth.
-\newblock edger: a bioconductor package for differential expression analysis of
-  digital gene expression data.
-\newblock {\em Bioinformatics}, 26(1):139--140, 2010.
-
-\bibitem{Robinson2010a}
-M.D. Robinson, A.~Oshlack, et~al.
-\newblock A scaling normalization method for differential expression analysis
-  of rna-seq data.
-\newblock {\em Genome Biol}, 11(3):R25, 2010.
-
-\end{thebibliography}
-
+\bibliographystyle{plainnat}
+\bibliography{siber}
 
 \end{document}

@@ -1,5 +1,7 @@
 Package: SIBER
 Type: Package
+LazyLoad: yes
+LazyData: true
 Date: 2014-01-29
 Title: Systematic Identification of Bimodally Expressed Genes Using RNAseq Data
 Version: 0.9.4
@@ -14,4 +16,4 @@ Description: SIBER(Systematic Identification of Bimodally Expressed genes
  generalized poisson distribution.
 License: GPL (>= 2)
 Imports: mclust
-Suggests: edgeR, doSNOW
+Suggests: edgeR, doParallel
