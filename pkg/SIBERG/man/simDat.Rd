@@ -42,7 +42,7 @@ Pan Tong (nickytong@gmail.com), Kevin R Coombes (krc@silicovore.com)
 
 
 \examples{
-library(SIBER)
+library(SIBERG)
 data(simDat)
 sapply(parList, dim)
 sapply(dataList, dim)
