@@ -28,9 +28,12 @@ index: a criterion for discovering and ranking bimodal signatures from cancer ge
 expression profiling data. Cancer informatics, 7, 199.
 
 Fraley, C. and Raftery, A. (2002). Model-based clustering, discriminant analysis, and
-density estimation. Journal of the american statistical association, 97(458), 611:631.
-Tong, P., Chen, Y., Su, X. and Coombes, K. R. (2012). Systematic Identification of Bimodally Expressed Genes
-Using RNAseq Data. Bioinformatics, submitted.
+density estimation. Journal of the american statistical association,
+97(458), 611:631.
+
+Tong, P., Chen, Y., Su, X. and Coombes, K. R. (2012). Systematic
+Identification of Bimodally Expressed Genes Using RNAseq
+Data. Bioinformatics, 2013 Mar 1;29(5):605-13. 
 }
 
 \author{

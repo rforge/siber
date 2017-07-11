@@ -1,8 +1,0 @@
-import(mclust)
-# Exported functions
-export(SIBER, fitLN, fitNB, fitGP, fitNL)
-       
-       
-
-  
-

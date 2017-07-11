@@ -29,7 +29,6 @@ with the true parameters given for testing and illustration purpose.}
 \usage{
 data(simDat)
 }
-
 \author{
 Pan Tong (nickytong@gmail.com), Kevin R Coombes (krc@silicovore.com)
 }

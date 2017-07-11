@@ -1,7 +1,7 @@
 %\VignetteIndexEntry{SIBER Vignette}
 %\VignetteDepends{mclust,edgeR,doParallel}
-%\VignetteKeywords{SIBER}
-%\VignettePackage{SIBER}
+%\VignetteKeywords{SIBERG}
+%\VignettePackage{SIBERG}
 
 \documentclass{article}
 \usepackage{graphicx}
@@ -18,7 +18,7 @@
 \setlength{\oddsidemargin}{0in}
 \setlength{\evensidemargin}{0in}
 
-\title{SIBER User Manual} 
+\title{SIBERG User Manual} 
 \author{Pan Tong and Kevin R Coombes}
 \date{\today}
 
@@ -45,8 +45,8 @@ options(continue=' ')
 @ 
 
 \section{Introduction}
-\texttt{SIBER} (\textbf{S}ystematic \textbf{I}dentification of
-\textbf{B}imodally \textbf{E}xpressed genes using \textbf{R}NAseq
+\texttt{SIBERG} (\textbf{S}ystematic \textbf{I}dentification of
+\textbf{B}imodally \textbf{E}xp\textbf{R}essed \textbF{G}enes using RNAseq
 data) is an R package that effectively identifies bimodally expressed
 genes from RNAseq data based on Bimodality Index. SIBER models the
 RNAseq data in the finite mixture modeling framework and incorporates
@@ -76,7 +76,7 @@ real RNAseq data.
 
 Of course, we need to load the \texttt{SIBER} package.
 <<loadLibrary>>=
-library(SIBER)
+library(SIBERG)
 @ 
 
 We simulate RNAseq count data from 1-component Negative Binomial

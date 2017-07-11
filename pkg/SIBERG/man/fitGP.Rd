@@ -43,7 +43,7 @@ For 0-inflated model, mu1=phi1=0.
 
 \references{
 Tong, P., Chen, Y., Su, X. and Coombes, K. R. (2012). Systematic Identification of Bimodally Expressed Genes
-Using RNAseq Data. Bioinformatics, submitted.
+Using RNAseq Data. Bioinformatics, 2013 Mar 1;29(5):605-13. 
 }
 
 \author{

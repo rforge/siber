@@ -40,14 +40,16 @@ A vector consisting estimates of mu1, mu2, sigma1, sigma2, p1, delta and BI.
 }
 
 \references{
-Wang, J.,Wen, S., Symmans,W., Pusztai, L., and Coombes, K. (2009). The bimodality
-index: a criterion for discovering and ranking bimodal signatures from cancer gene
-expression profiling data. Cancer informatics, 7, 199.
+  Wang J, Wen S, Symmans WF, Pusztai L, Coombes KR.\cr
+  \emph{The bimodality index: a criterion for discovering and ranking
+    bimodal signatures from cancer gene expression profiling data.}\cr
+  Cancer Inform. 2009 Aug 5;7:199-216.
 
-Tong, P., Chen, Y., Su, X. and Coombes, K. R. (2012). Systematic Identification of Bimodally Expressed Genes
-Using RNAseq Data. Bioinformatics, submitted.
+  Tong P, Chen Y, Su X, Coombes KR.\cr
+  \emph{SIBER: systematic identification of bimodally expressed genes
+    using RNAseq data.}\cr
+  Bioinformatics. 2013 Mar 1;29(5):605-13.
 }
-
 \author{
 Pan Tong (nickytong@gmail.com), Kevin R Coombes (krc@silicovore.com)
 }

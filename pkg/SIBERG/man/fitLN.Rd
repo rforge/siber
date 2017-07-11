@@ -49,10 +49,10 @@ Wang, J.,Wen, S., Symmans,W., Pusztai, L., and Coombes, K. (2009). The bimodalit
 index: a criterion for discovering and ranking bimodal signatures from cancer gene
 expression profiling data. Cancer informatics, 7, 199.
 
-Tong, P., Chen, Y., Su, X. and Coombes, K. R. (2012). Systematic Identification of Bimodally Expressed Genes
-Using RNAseq Data. Bioinformatics, submitted.
+Tong, P., Chen, Y., Su, X. and Coombes, K. R. (2012). Systematic
+Identification of Bimodally Expressed Genes Using RNAseq
+Data. Bioinformatics, 2013 Mar 1;29(5):605-13. 
 }
-
 \author{
 Pan Tong (nickytong@gmail.com), Kevin R Coombes (krc@silicovore.com)
 }
