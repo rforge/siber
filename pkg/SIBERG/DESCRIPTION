@@ -1,9 +1,9 @@
 Package: SIBERG
 Type: Package
 LazyData: true
-Date: 2017-07-11
+Date: 2018-05-18
 Title: Systematic Identification of Bimodally Expressed Genes Using RNAseq Data
-Version: 2.0.1
+Version: 2.0.2
 Author: Pan Tong, Kevin R. Coombes
 Maintainer: Kevin R. Coombes <krc@silicovore.com>
 Description: Provides models to identify bimodally expressed genes from
